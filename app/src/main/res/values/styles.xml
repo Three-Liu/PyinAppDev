@@ -1,0 +1,37 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme.Base" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+    </style>
+    <style name="AppTheme" parent="AppTheme.Base">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+    <style name="ButtonBorderless" parent="Base.Widget.AppCompat.Button.Borderless">
+        <item name="android:textAlignment">center</item>
+        <item name="android:textSize">20dp</item>
+    </style>
+    <style name="ButtonRound" parent="ButtonBorderless">
+        <item name="android:background">@drawable/round_button</item>
+        <item name="android:textColor">@color/colorButton</item>
+    </style>
+    <style name="Edit.Base" parent="Widget.AppCompat.EditText">
+        <item name="android:background">@color/colorFont</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:paddingTop">7dp</item>
+        <item name="android:paddingBottom">7dp</item>
+        <item name="android:layout_marginTop">6dp</item>
+        <item name="android:layout_marginBottom">6dp</item>
+    </style>
+
+
+
+
+
+
+</resources>
