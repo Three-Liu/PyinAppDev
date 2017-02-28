@@ -6,4 +6,8 @@
     <string name="user_pass">密码</string>
     <string name="user_forget">忘记密码</string>
     <string name="user_reg">注册</string>
+    <string name="old_pass">输入旧密码</string>
+    <string name="new_pass">输入新密码</string>
+    <string name="confirm_pass">确认新密码</string>
+    <string name="confirm_string">确定</string>
 </resources>
