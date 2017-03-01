@@ -12,14 +12,20 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
         <RelativeLayout
+            android:layout_marginTop="60dp"
             android:layout_centerHorizontal="true"
-            android:layout_centerVertical="true"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
             <LinearLayout
                 android:orientation="vertical"
                 android:layout_width="250dp"
                 android:layout_height="wrap_content">
+                <ImageView
+                    android:layout_gravity="center_horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="40dp"
+                    android:src="@mipmap/layout_logo"/>
                 <EditText
                     android:id="@+id/old_pass"
                     android:hint="@string/old_pass"

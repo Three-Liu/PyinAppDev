@@ -10,4 +10,10 @@
     <string name="new_pass">输入新密码</string>
     <string name="confirm_pass">确认新密码</string>
     <string name="confirm_string">确定</string>
+    <string name="btn_reset_msg">发送验证码</string>
+    <string name="edit_confirm_msg">请输入验证码</string>
+    <string name="edit_tel">请输入手机号</string>
+    <string name="btn_confirm">下一步</string>
+    <string name="str_user_pass">请输入密码</string>
+    <string name="str_user_confirm">请再次输入密码</string>
 </resources>
