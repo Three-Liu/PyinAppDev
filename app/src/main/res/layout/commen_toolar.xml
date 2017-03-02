@@ -12,5 +12,5 @@
     <View android:layout_width="match_parent"
         android:layout_height="5dp"
         android:layout_alignBottom="@id/toolbar"
-        android:background="@drawable/toolbar_shadow"/>
+        android:background="@drawable/toolbar_shadow_up"/>
 </RelativeLayout>

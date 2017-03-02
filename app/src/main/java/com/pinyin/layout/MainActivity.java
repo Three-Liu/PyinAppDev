@@ -3,39 +3,53 @@ package com.pinyin.layout;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
+import android.widget.ImageView;
 
+import com.pinyin.fragment.CouponFragment;
+import com.pinyin.fragment.HomeFragment;
+import com.pinyin.fragment.MsgFragment;
+import com.pinyin.fragment.MyInfoFragment;
 import com.pinyin.liusirui.pyinappdev.R;
+import com.pinyin.mainnavigatetabbar.widget.MainNavigateTabBar;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener{
-    private Button button1;
-    private Button button2;
-    private Button button3;
+public class MainActivity extends AppCompatActivity{
+    private MainNavigateTabBar navigateTabBar;
+    private ImageButton imageButton;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        button1 = (Button)findViewById(R.id.btn1);
-        button2 = (Button)findViewById(R.id.btn2);
-        button3 = (Button)findViewById(R.id.btn3);
-        button1.setOnClickListener(this);
-        button2.setOnClickListener(this);
-        button3.setOnClickListener(this);
+
+        navigateTabBar = (MainNavigateTabBar) findViewById(R.id.navigateTabBar);
+        //对应xml中的containerId
+        navigateTabBar.setFrameLayoutId(R.id.main_container);
+        //对应xml中的navigateTabTextColor
+        navigateTabBar.setTabTextColor(getResources().getColor(R.color.tab_text_normal));
+        //对应xml中的navigateTabSelectedTextColor
+        navigateTabBar.setSelectedTabTextColor(getResources().getColor(R.color.colorButton));
+
+        //恢复选项状态
+        navigateTabBar.onRestoreInstanceState(savedInstanceState);
+
+        navigateTabBar.addTab(HomeFragment.class, new MainNavigateTabBar.TabParam(R.mipmap.ic_tab_bar_home, R.mipmap.ic_tab_bar_home_selected, R.string.tab_bar_text_home));
+        navigateTabBar.addTab(CouponFragment.class, new MainNavigateTabBar.TabParam(R.mipmap.ic_tab_bar_coupon, R.mipmap.ic_tab_bar_coupon_selected, R.string.tab_bar_text_coupon));
+        navigateTabBar.addTab(HomeFragment.class, new MainNavigateTabBar.TabParam(R.mipmap.ic_blank, R.mipmap.ic_blank, R.string.tab_bar_text_broadcast));
+        navigateTabBar.addTab(MsgFragment.class, new MainNavigateTabBar.TabParam(R.mipmap.ic_tab_bar_msg, R.mipmap.ic_tab_bar_msg_selected, R.string.tab_bar_text_msg));
+        navigateTabBar.addTab(MyInfoFragment.class, new MainNavigateTabBar.TabParam(R.mipmap.ic_tab_bar_my_info, R.mipmap.ic_tab_bar_my_info_selected, R.string.tab_bar_text_my_info));
+
+        //boardcast
+
     }
 
+
     @Override
-    public void onClick(View view) {
-        switch (view.getId()){
-            case R.id.btn1:
-                startActivity(new Intent(MainActivity.this,LoginActivity.class));
-                break;
-            case R.id.btn2:
-                startActivity(new Intent(MainActivity.this,PassResetActivity.class));
-                break;
-            case R.id.btn3:
-                startActivity(new Intent(MainActivity.this,RegisterActivity.class));
-                break;
-        }
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        //保存当前选中的选项状态
+        navigateTabBar.onSaveInstanceState(outState);
     }
 }

@@ -6,5 +6,6 @@
     <color name="colorBackground">#f1f1f1</color>
     <color name="colorFont">#ffffff</color>
     <color name="colorButtonDown">#b3e5fc</color>
-    <color name="colorButton">#8ecef9</color>
+    <color name="colorButton">#7ecef9</color>
+    <color name="tab_text_normal">#212121</color>
 </resources>

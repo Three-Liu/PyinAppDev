@@ -26,6 +26,21 @@ public class LoginActivity extends AppCompatActivity {
                 startActivity(new Intent(LoginActivity.this,MainActivity.class));
             }
         });
-
+        btn_forg = (Button)findViewById(R.id.forget);
+        btn_reg = (Button)findViewById(R.id.register);
+        //forget password
+        btn_forg.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(LoginActivity.this,ForgetActicity.class));
+            }
+        });
+        // fresh man
+        btn_reg.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(LoginActivity.this,RegisterActivity.class));
+            }
+        });
     }
 }

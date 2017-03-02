@@ -4,7 +4,7 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/layout_logo"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
@@ -17,7 +17,8 @@
         </activity>
         <activity android:name="com.pinyin.layout.LoginActivity" />
         <activity android:name="com.pinyin.layout.PassResetActivity" />
-        <activity android:name="com.pinyin.layout.RegisterActivity"></activity>
+        <activity android:name="com.pinyin.layout.RegisterActivity" />
+        <activity android:name="com.pinyin.layout.ForgetActicity"></activity>
     </application>
 
 </manifest>

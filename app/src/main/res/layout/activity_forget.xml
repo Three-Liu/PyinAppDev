@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_forgetpassword_activity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorBackground"
+    tools:context="com.pinyin.layout.LoginActivity">
+    <include layout="@layout/commen_toolar"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="50dp"
+            android:layout_marginTop="40dp"
+            android:src="@mipmap/layout_logo" />
+        <!--first view-->
+        <LinearLayout
+            android:id="@+id/first_container"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/logo"
+            android:layout_centerHorizontal="true"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/tel_num"
+                style="@style/Edit.Base"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/edit_tel"
+                android:inputType="number" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/confirm_code"
+                    style="@style/Edit.Base"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="16dp"
+                    android:gravity="center"
+                    android:hint="@string/edit_confirm_msg"
+                    android:inputType="text" />
+
+                <Button
+                    android:id="@+id/btn_fetch_msg"
+                    style="@style/ButtonStyle"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center_vertical"
+                    android:text="@string/btn_reset_msg"
+                    android:textSize="15dp" />
+            </LinearLayout>
+
+
+            <Button
+                android:id="@+id/btn_reg_confirm"
+                style="@style/ButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@id/confirm_code"
+                android:layout_marginTop="10dp"
+                android:text="@string/btn_confirm" />
+        </LinearLayout>
+        <!--second view-->
+        <LinearLayout
+            android:visibility="invisible"
+            android:id="@+id/second_container"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/logo"
+            android:layout_centerHorizontal="true"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/user_pass"
+                style="@style/Edit.Base"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/str_user_pass"
+                android:inputType="number" />
+            <EditText
+                android:id="@+id/user_pass_confirm"
+                style="@style/Edit.Base"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/str_user_confirm"
+                android:inputType="number" />
+
+            <Button
+                android:id="@+id/btn_confirm"
+                style="@style/ButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@id/confirm_code"
+                android:layout_marginTop="10dp"
+                android:text="@string/confirm_string" />
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

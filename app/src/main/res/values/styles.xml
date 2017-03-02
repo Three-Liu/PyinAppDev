@@ -19,7 +19,7 @@
         <item name="android:textColor">@color/colorButton</item>
     </style>
     <style name="ButtonStyle" parent="ButtonBorderless">
-        <item name="android:background">@color/colorButton</item>
+        <item name="android:background">@drawable/button_selector</item>
         <item name="android:textColor">@color/colorFont</item>
     </style>
     <style name="Edit.Base" parent="Widget.AppCompat.EditText">
