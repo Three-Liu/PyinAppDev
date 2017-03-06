@@ -2,8 +2,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorBackground"
     android:orientation="vertical"
-    tools:context="com.pinyin.fragment.CouponFragment">
+    tools:context="com.pinyin.ui.fragment.CouponFragment">
 
     <!-- TODO: Update blank fragment layout -->
     <RelativeLayout
@@ -14,7 +15,7 @@
         <ImageView
             android:id="@+id/profile_image_bg"
             android:layout_width="match_parent"
-            android:layout_height="200dp"
+            android:layout_height="180dp"
             android:scaleType="centerCrop" />
         <de.hdodenhof.circleimageview.CircleImageView
             xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -30,5 +31,14 @@
             android:layout_below="@id/profile_image_bg"
             android:background="@drawable/toolbar_shadow_up"/>
     </RelativeLayout>
-
+    <ListView
+        android:layout_marginTop="10dp"
+        android:id="@+id/list"
+        android:headerDividersEnabled="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <TextView
+        android:background="@drawable/list_divider"
+        android:layout_width="match_parent"
+        android:layout_height="2px"/>
 </LinearLayout>

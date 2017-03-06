@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@color/colorBackground"
-    tools:context="com.pinyin.layout.PassResetActivity">
+    tools:context="com.pinyin.ui.layout.PassResetActivity">
     <include layout="@layout/commen_toolar"/>
     <RelativeLayout
         android:layout_width="match_parent"

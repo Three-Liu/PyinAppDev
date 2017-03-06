@@ -8,17 +8,17 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="com.pinyin.layout.MainActivity">
+        <activity android:name="com.pinyin.ui.layout.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.pinyin.layout.LoginActivity" />
-        <activity android:name="com.pinyin.layout.PassResetActivity" />
-        <activity android:name="com.pinyin.layout.RegisterActivity" />
-        <activity android:name="com.pinyin.layout.ForgetActicity"></activity>
+        <activity android:name="com.pinyin.ui.layout.LoginActivity" />
+        <activity android:name="com.pinyin.ui.layout.PassResetActivity" />
+        <activity android:name="com.pinyin.ui.layout.RegisterActivity" />
+        <activity android:name="com.pinyin.ui.layout.ForgetActicity"></activity>
     </application>
 
 </manifest>

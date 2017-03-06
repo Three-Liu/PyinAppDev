@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="horizontal"
-    tools:context="com.pinyin.layout.BottomButtonFragment"
+    tools:context="com.pinyin.ui.layout.BottomButtonFragment"
     android:weightSum="1">
 
     <RadioButton

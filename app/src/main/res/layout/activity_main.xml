@@ -5,7 +5,7 @@
     android:id="@+id/activity_main2"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.pinyin.layout.MainActivity">
+    tools:context="com.pinyin.ui.layout.MainActivity">
     <include
         android:id="@+id/flag"
         layout="@layout/fragment_toolar"/>
@@ -15,7 +15,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 
-    <com.pinyin.mainnavigatetabbar.widget.MainNavigateTabBar
+    <com.pinyin.ui.mainnavigatetabbar.widget.MainNavigateTabBar
         android:id="@+id/navigateTabBar"
         android:layout_width="match_parent"
         android:layout_alignParentBottom="true"

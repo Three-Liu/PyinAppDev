@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@color/colorBackground"
-    tools:context="com.pinyin.layout.LoginActivity">
+    tools:context="com.pinyin.ui.layout.LoginActivity">
     <include layout="@layout/commen_toolar"/>
     <RelativeLayout
         android:layout_width="match_parent"
