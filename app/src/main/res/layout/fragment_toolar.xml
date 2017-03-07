@@ -2,7 +2,8 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:background="@color/colorPrimaryDark">
     <TextView
         android:id="@+id/title"
         android:layout_width="match_parent"
@@ -11,9 +12,9 @@
         android:paddingTop="5dp"
         android:paddingBottom="5dp"
         android:layout_height="50dp"
-        android:background="@color/colorBackground"/>
-    <View android:layout_width="match_parent"
-        android:layout_height="5dp"
-        android:layout_alignBottom="@id/title"
-        android:background="@drawable/toolbar_shadow_up"/>
+        android:textColor="@color/colorFont"/>
+    <!--<View android:layout_width="match_parent"-->
+        <!--android:layout_height="5dp"-->
+        <!--android:layout_alignBottom="@id/title"-->
+        <!--android:background="@drawable/toolbar_shadow_up"/>-->
 </RelativeLayout>

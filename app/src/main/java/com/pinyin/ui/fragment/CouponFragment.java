@@ -6,6 +6,10 @@ import android.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.webkit.WebResourceRequest;
+import android.webkit.WebView;
+import android.webkit.WebViewClient;
+import android.widget.RelativeLayout;
 
 import com.pinyin.liusirui.pyinappdev.R;
 
@@ -24,7 +28,10 @@ public class CouponFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_coupon, container, false);
+        View view = inflater.inflate(R.layout.fragment_coupon, container, false);
+        WebView webView = (WebView)view.findViewById(R.id.web_page);
+        webView.loadUrl("http://www.wangluogo.com");
+        return view;
     }
 
 }

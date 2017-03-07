@@ -66,14 +66,14 @@ public class RegisterActivity extends AppCompatActivity {
         @Override
         public void onTick(long millisUntilFinished) {
             fetch.setClickable(false);
-            fetch.setBackgroundColor(getResources().getColor(R.color.colorButtonDown));
+            fetch.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
             fetch.setText("(" + millisUntilFinished / 1000 + ") 秒");
         }
 
         @Override
         public void onFinish() {
             fetch.setText("重新发送");
-            fetch.setBackgroundColor(getResources().getColor(R.color.colorButton));
+            fetch.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
             fetch.setClickable(true);
         }
     }

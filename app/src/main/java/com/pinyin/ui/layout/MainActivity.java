@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity{
         //对应xml中的navigateTabTextColor
         navigateTabBar.setTabTextColor(getResources().getColor(R.color.tab_text_normal));
         //对应xml中的navigateTabSelectedTextColor
-        navigateTabBar.setSelectedTabTextColor(getResources().getColor(R.color.colorButton));
+        navigateTabBar.setSelectedTabTextColor(getResources().getColor(R.color.colorPrimaryDark));
 
         //恢复选项状态
         navigateTabBar.onRestoreInstanceState(savedInstanceState);

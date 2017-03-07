@@ -1,6 +1,8 @@
 package com.pinyin.adapter;
 
 import android.content.Context;
+import android.graphics.Color;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -28,6 +30,14 @@ public class MyInfoAdapter extends BaseAdapter {
         this.data = data;
     }
 
+//    @Override
+//    public boolean isEnabled(int position) {
+//        if (data.get(position).equals("null"))
+//            return false;
+//        else
+//            return true;
+//    }
+
     @Override
     public int getCount() {
         return data.size();
@@ -42,6 +52,7 @@ public class MyInfoAdapter extends BaseAdapter {
     public long getItemId(int i) {
         return i;
     }
+
     //然后重写getView
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
@@ -51,12 +62,15 @@ public class MyInfoAdapter extends BaseAdapter {
         MyInfo myInfo = data.get(position);
         if (!myInfo.getItem().equals("null")) {
             convertView = inflater.inflate(R.layout.my_info_item, null);
+
             icon = (ImageView) convertView.findViewById(R.id.info_list_icon);
             item = (TextView) convertView.findViewById(R.id.info_list_item);
             arrow = (ImageView) convertView.findViewById(R.id.info_list_arrow);
+
             icon.setImageResource(myInfo.getIconRes());
+            item.setText(myInfo.getItem());
             arrow.setImageResource(myInfo.getArrowRes());
-        }else{
+        } else {
             convertView = inflater.inflate(R.layout.my_info_divider, null);
         }
         return convertView;

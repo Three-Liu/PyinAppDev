@@ -7,8 +7,9 @@
     tools:context="com.pinyin.ui.fragment.CouponFragment">
 
     <!-- TODO: Update blank fragment layout -->
+    <include
+        layout="@layout/fragment_toolar"/>
     <RelativeLayout
-        android:layout_marginTop="1dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
@@ -31,12 +32,13 @@
             android:layout_below="@id/profile_image_bg"
             android:background="@drawable/toolbar_shadow_up"/>
     </RelativeLayout>
+
     <ListView
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="16dp"
         android:id="@+id/list"
-        android:headerDividersEnabled="true"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
+
     <TextView
         android:background="@drawable/list_divider"
         android:layout_width="match_parent"
