@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_my_ping"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    tools:context="com.pinyin.ui.layout.MyPingActivity">
+    <include
+        android:id="@+id/toolbar_flag"
+        layout="@layout/commen_toolar"/>
+    <android.support.v7.widget.RecyclerView
+        android:layout_below="@id/toolbar_flag"
+        android:id="@+id/my_ping_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </android.support.v7.widget.RecyclerView>
+
+    <FrameLayout
+        android:id="@android:id/empty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true">
+        <include
+            layout="@layout/list_view_empty"/>
+    </FrameLayout>
+</RelativeLayout>

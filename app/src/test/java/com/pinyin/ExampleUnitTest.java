@@ -1,4 +1,4 @@
-package com.pinyin.ui.layout;
+package com.pinyin;
 
 import org.junit.Test;
 

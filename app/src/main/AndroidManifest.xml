@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.pinyin.liusirui.pyinappdev">
-    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
+        android:name="com.pinyin.utils.MyApplication"
         android:allowBackup="true"
         android:icon="@mipmap/layout_logo"
         android:label="@string/app_name"
@@ -19,7 +21,11 @@
         <activity android:name="com.pinyin.ui.layout.LoginActivity" />
         <activity android:name="com.pinyin.ui.layout.PassResetActivity" />
         <activity android:name="com.pinyin.ui.layout.RegisterActivity" />
-        <activity android:name="com.pinyin.ui.layout.ForgetActicity"></activity>
+        <activity android:name="com.pinyin.ui.layout.ForgetActicity" />
+        <activity android:name="com.pinyin.ui.layout.PersonDetailActivity" />
+        <activity android:name="com.pinyin.ui.layout.MyMoneyActivity" />
+        <activity android:name="com.pinyin.ui.layout.MyPingActivity" />
+        <activity android:name="com.pinyin.ui.layout.MyBroadActivity"></activity>
     </application>
 
 </manifest>

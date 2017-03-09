@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_my_money"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    tools:context="com.pinyin.ui.layout.MyMoneyActivity">
+
+    <include
+        android:id="@+id/below_flag"
+        layout="@layout/commen_toolar" />
+
+    <RelativeLayout
+        android:id="@+id/main_container"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_below="@id/below_flag"
+        android:background="@drawable/corner_bg">
+
+        <LinearLayout
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:orientation="vertical">
+            <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/money_head"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                app:civ_border_color="@android:color/black"
+                app:civ_border_width="0.5dp" />
+            <TextView
+                android:text="@string/total_money"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="65dp"
+                android:layout_width="wrap_content"
+                android:textColor="@android:color/black"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/my_total_money"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:textColor="@android:color/black"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </RelativeLayout>
+    <Button
+        android:layout_below="@id/main_container"
+        android:id="@+id/deposit_money"
+        android:layout_marginTop="25dp"
+        android:text="@string/deposit_money"
+        android:layout_width="match_parent"
+        android:textSize="14sp"
+        android:layout_height="45dp"
+        android:background="@color/colorFont"
+        style="@style/ButtonBorderless"/>
+    <View
+        android:layout_below="@id/deposit_money"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@drawable/view_seperater"/>
+    <Button
+        android:id="@+id/withdraw_money"
+        android:text="@string/withdraw_money"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:textSize="14sp"
+        android:layout_below="@id/deposit_money"
+        android:background="@color/colorFont"
+        style="@style/ButtonBorderless"/>
+</RelativeLayout>

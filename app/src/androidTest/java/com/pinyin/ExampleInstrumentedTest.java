@@ -1,4 +1,4 @@
-package com.pinyin.ui.layout;
+package com.pinyin;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

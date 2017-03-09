@@ -24,4 +24,12 @@
     <string name="tab_bar_text_msg">消息</string>
     <string name="tab_bar_text_my_info">我的</string>
     <string name="tab_bar_text_broadcast">发布</string>
+    <string name="ac_person_name">姓名:</string>
+    <string name="ac_person_nick">昵称:</string>
+    <string name="ac_person_birth">生日:</string>
+    <string name="ac_person_tel">手机号:</string>
+    <string name="ac_person_address">地址:</string>
+    <string name="total_money">总金额</string>
+    <string name="deposit_money">充值</string>
+    <string name="withdraw_money">提现</string>
 </resources>

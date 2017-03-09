@@ -1,0 +1,405 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_person_detail"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    tools:context="com.pinyin.ui.layout.PersonDetailActivity">
+
+    <RelativeLayout
+        android:id="@+id/profile_container"
+        android:layout_width="match_parent"
+        android:layout_height="186dp">
+
+        <ImageView
+            android:id="@+id/profile_image_bg"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:scaleType="centerCrop" />
+
+        <ImageView
+            android:id="@+id/back_button"
+            android:layout_width="20dp"
+            android:layout_height="25dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="15dp"
+            android:layout_marginStart="13dp"
+            android:layout_marginTop="20dp"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/profile_arrow" />
+
+        <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/profile_image"
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            app:civ_border_color="#fdf7f7"
+            app:civ_border_width="1dp" />
+
+        <!--<View-->
+        <!--android:layout_below="@id/profile_image_bg"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="5dp"-->
+        <!--android:layout_alignBottom="@id/title"-->
+        <!--android:background="@drawable/toolbar_shadow_up" />-->
+
+    </RelativeLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/profile_container"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="-20dp"
+        android:onClick="click"
+        android:src="@mipmap/profile_edit"
+        app:borderWidth="0.0dip"
+        app:elevation="10.0dip"
+        app:fabSize="normal"
+        app:pressedTranslationZ="10.0dip"
+        app:rippleColor="@color/colorBackground" />
+<!--first container-->
+    <RelativeLayout
+        android:id="@+id/info_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/profile_container"
+        android:layout_marginTop="25dp"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <LinearLayout
+            android:id="@+id/first_container"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="1px"
+                android:layout_height="40dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="4"
+                android:background="@drawable/my_corner_bg">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:textColor="@android:color/black"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="12dp"
+                        android:text="@string/ac_person_nick"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:textColor="@android:color/black"
+                        android:id="@+id/ac_person_nick"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="20dp"
+                        android:text="韩梅梅"
+                        android:textSize="16sp" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="1px"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:background="@drawable/my_corner_bg"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/ac_person_gender"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_gravity="center_horizontal" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/second_container"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@id/first_container"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/my_corner_bg"
+            android:orientation="horizontal">
+
+            <TextView
+                android:textColor="@android:color/black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="12dp"
+                android:text="@string/ac_person_birth"
+                android:textSize="16sp" />
+
+            <TextView
+                android:textColor="@android:color/black"
+                android:id="@+id/ac_person_birth"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="20dp"
+                android:text="1927-8-1"
+                android:textSize="16sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/third_container"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@id/second_container"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/my_corner_bg"
+            android:orientation="horizontal">
+
+            <TextView
+                android:textColor="@android:color/black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="12dp"
+                android:text="@string/ac_person_tel"
+                android:textSize="16sp" />
+
+            <TextView
+                android:textColor="@android:color/black"
+                android:id="@+id/ac_person_tel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="20dp"
+                android:text="+86 123456789"
+                android:textSize="16sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/fourth_container"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@id/third_container"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/my_corner_bg"
+            android:orientation="horizontal">
+
+            <TextView
+                android:textColor="@android:color/black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="12dp"
+                android:text="@string/ac_person_name"
+                android:textSize="16sp" />
+
+            <TextView
+                android:textColor="@android:color/black"
+                android:id="@+id/ac_person_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="20dp"
+                android:text="李华"
+                android:textSize="16sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/fiveth_container"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@id/fourth_container"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/my_corner_bg"
+            android:orientation="horizontal">
+            <TextView
+                android:textColor="@android:color/black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="12dp"
+                android:text="@string/ac_person_address"
+                android:textSize="16sp" />
+
+            <TextView
+                android:textColor="@android:color/black"
+                android:id="@+id/ac_person_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="20dp"
+                android:text="北京市"
+                android:textSize="16sp" />
+        </RelativeLayout>
+    </RelativeLayout>
+<!--second container-->
+    <RelativeLayout
+        android:visibility="invisible"
+        android:id="@+id/info_edit_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/profile_container"
+        android:layout_marginTop="25dp"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <LinearLayout
+            android:id="@+id/first_edit_container"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="1px"
+                android:layout_height="match_parent"
+                android:layout_marginRight="12dp"
+                android:layout_weight="3"
+                android:orientation="vertical"
+                android:background="@drawable/my_corner_bg">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/ac_edit_person_nick_flag"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="5dp"
+                        android:text="@string/ac_person_nick"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp" />
+
+                    <EditText
+                        android:textColor="@android:color/darker_gray"
+                        android:id="@+id/ac_edit_person_nick"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/ac_edit_person_nick_flag"
+                        android:gravity="center_vertical"
+                        android:layout_marginLeft="20dp"
+                        android:hint="韩梅梅"
+                        android:textSize="16sp" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="1px"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:background="@drawable/my_corner_bg"
+                android:orientation="horizontal">
+                <RadioGroup
+                    android:id="@+id/ac_edit_person_gender"
+                    android:layout_marginLeft="5dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <RadioButton
+                        android:text="男"
+                        android:id="@+id/sex_male"
+                        android:textColor="@android:color/darker_gray"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5dp"/>
+                    <RadioButton
+                        android:text="女"
+                        android:id="@+id/sex_female"
+                        android:textColor="@android:color/darker_gray"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </RadioGroup>
+            </LinearLayout>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/second_edit_container"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@id/first_edit_container"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/my_corner_bg"
+            android:orientation="horizontal">
+
+            <TextView
+                android:textColor="@android:color/black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="12dp"
+                android:text="@string/ac_person_birth"
+                android:textSize="16sp" />
+
+            <TextView
+                android:textColor="@android:color/darker_gray"
+                android:id="@+id/ac_edit_person_birth"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="20dp"
+                android:text="1927-8-1"
+                android:textSize="16sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/fiveth_edit_container"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@id/second_edit_container"
+            android:layout_marginTop="110dp"
+            android:background="@drawable/my_corner_bg"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/second_container_flag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="20dp"
+                android:textColor="@android:color/black"
+                android:text="@string/ac_person_address"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/ac_edit_person_address"
+                android:layout_width="wrap_content"
+                android:textColor="@android:color/darker_gray"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/second_container_flag"
+                android:layout_centerVertical="true"
+                android:textSize="16sp" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>
