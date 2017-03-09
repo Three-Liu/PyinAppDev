@@ -9,11 +9,13 @@
     <include
         android:id="@+id/flag"
         layout="@layout/fragment_toolar"/>
-    <TextView
-        android:textSize="40sp"
-        android:layout_gravity="center_horizontal"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:text="消息" />
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/msg_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
+    </android.support.v7.widget.RecyclerView>
+    <!--<ImageView-->
+        <!--android:layout_width=""-->
+        <!--android:layout_height="" />-->
 </LinearLayout>

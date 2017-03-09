@@ -25,7 +25,7 @@ public class MyBroadActivity extends AppCompatActivity {
         toolbar_title = (TextView)findViewById(R.id.toolbar_title);
         empty_hint = (TextView)findViewById(R.id.empty_hint);
 
-        toolbar_title.setText("我拼过的");
+        toolbar_title.setText("我发布的");
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

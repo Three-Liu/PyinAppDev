@@ -10,6 +10,7 @@
         <item name="colorPrimary">@color/colorPrimaryDark</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+
     </style>
     <style name="ButtonBorderless" parent="Base.Widget.AppCompat.Button.Borderless">
         <item name="android:textAlignment">center</item>

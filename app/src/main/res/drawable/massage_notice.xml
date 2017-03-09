@@ -1,0 +1,25 @@
+<shape
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="oval"
+    android:useLevel="false" >
+    <solid android:color="#da2424" />
+    <padding
+        android:left="2dp"
+        android:top="1dp"
+        android:right="2dp"
+        android:bottom="1dp" />
+
+
+    <!--border-->
+
+    <!--<solid-->
+        <!--android:color="@color/common_red" />-->
+
+    <!--<stroke-->
+        <!--android:width="1dp"-->
+        <!--android:color="@android:color/white" />-->
+
+    <!--height and width matches -->
+    <size android:width="15dp"
+        android:height="15dp" />
+</shape>

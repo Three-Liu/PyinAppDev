@@ -28,13 +28,13 @@
             layout="@layout/list_view_empty"/>
         <Button
             android:text="发布宝贝"
-            android:layout_marginTop="5dp"
+            android:layout_marginTop="20dp"
             android:textSize="14sp"
             android:textColor="@color/colorFont"
             android:background="@drawable/button_selector"
-            android:layout_width="wrap_content"
+            android:layout_width="70dp"
             android:layout_gravity="center_horizontal"
-            android:layout_height="match_parent"
+            android:layout_height="40dp"
             style="@style/ButtonBorderless"/>
     </LinearLayout>
 </RelativeLayout>

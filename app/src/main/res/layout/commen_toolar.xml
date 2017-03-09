@@ -9,7 +9,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/colorPrimaryDark"
-        app:navigationIcon="@mipmap/profile_arrow"
+        app:navigationIcon="@mipmap/arrow"
         app:titleTextColor="@color/colorFont">
         <TextView
             android:id="@+id/toolbar_title"
