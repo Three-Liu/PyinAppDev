@@ -12,6 +12,7 @@ import com.pinyin.ui.fragment.MsgFragment;
 import com.pinyin.ui.fragment.MyInfoFragment;
 import com.pinyin.liusirui.pyinappdev.R;
 import com.pinyin.ui.mainnavigatetabbar.widget.MainNavigateTabBar;
+import com.pinyin.utils.BitmapByteDrawable;
 import com.pinyin.utils.MyApplication;
 
 public class MainActivity extends AppCompatActivity{
@@ -23,7 +24,7 @@ public class MainActivity extends AppCompatActivity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         MyApplication application = (MyApplication)getApplication();
-        application.setPerson(new Person("阿迪力", false, "1994-03-02", "+86 110", "北京市石景山区", "12345", getResources().getDrawable(R.mipmap.head), "阿迪力"));
+        application.setPerson(new Person("甘景洲", true, "1996-01-04", "+86 110", "北京市石景山区", "12345", getResources().getDrawable(R.mipmap.head), "甘景洲"));
 
         navigateTabBar = (MainNavigateTabBar) findViewById(R.id.navigateTabBar);
         //对应xml中的containerId

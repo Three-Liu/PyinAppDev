@@ -2,18 +2,47 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorBackground"
     android:orientation="vertical"
     tools:context="com.pinyin.ui.fragment.CouponFragment">
 
     <!-- TODO: Update blank fragment layout -->
-    <include
-        android:id="@+id/flag"
-        layout="@layout/fragment_toolar"/>
-    <TextView
-        android:textSize="40sp"
-        android:layout_gravity="center_horizontal"
-        android:layout_width="wrap_content"
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/colorPrimaryDark">
+
+        <Button
+            android:id="@+id/search_button"
+            style="@style/ButtonBorderless"
+            android:layout_width="240dp"
+            android:layout_height="25dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/my_corner_bg" />
+
+        <ImageView
+            android:id="@+id/image_classify"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:layout_toRightOf="@id/search_button"
+            android:src="@mipmap/classify" />
+    </RelativeLayout>
+
+    <com.yalantis.phoenix.PullToRefreshView
+        android:id="@+id/main_puller"
         android:layout_height="match_parent"
-        android:text="主页" />
+        android:layout_width="match_parent">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/main_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingTop="5dp">
+
+        </android.support.v7.widget.RecyclerView>
+    </com.yalantis.phoenix.PullToRefreshView>
 
 </LinearLayout>

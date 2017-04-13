@@ -18,6 +18,7 @@
     </style>
     <style name="ButtonRound" parent="ButtonBorderless">
         <item name="android:textColor">@color/colorPrimaryDark</item>
+        <item name="android:background">@drawable/corner_button</item>
     </style>
     <style name="ButtonStyle" parent="ButtonBorderless">
         <item name="android:background">@drawable/button_selector</item>

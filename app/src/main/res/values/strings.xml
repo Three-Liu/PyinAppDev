@@ -32,4 +32,5 @@
     <string name="total_money">总金额</string>
     <string name="deposit_money">充值</string>
     <string name="withdraw_money">提现</string>
+    <string name="good_link">商品地址</string>
 </resources>

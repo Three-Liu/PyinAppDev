@@ -1,5 +1,7 @@
 package com.pinyin.utils;
 
+import android.content.Context;
+import android.content.Intent;
 import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -8,9 +10,17 @@ import android.graphics.Matrix;
 import android.graphics.PixelFormat;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
+import android.net.Uri;
+import android.os.Environment;
+import android.provider.MediaStore;
+import android.util.Log;
+import android.widget.Toast;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.io.IOException;
 
 /**
@@ -18,7 +28,7 @@ import java.io.IOException;
  */
 
 public class BitmapByteDrawable {
-
+    private static final String TAG = "PicConfig";
 
     public static Drawable bitmapToDrawable(Resources resources, Bitmap bm) {
         Drawable drawable = new BitmapDrawable(resources, bm);
@@ -39,6 +49,7 @@ public class BitmapByteDrawable {
         bm.compress(Bitmap.CompressFormat.PNG, 100, baos);
         return baos.toByteArray();
     }
+
     public static Bitmap byteArray2Bitmap(byte[] data, int width, int height) {
         BitmapFactory.Options options = new BitmapFactory.Options();
         options.inJustDecodeBounds = true;
@@ -60,6 +71,7 @@ public class BitmapByteDrawable {
 
         return BitmapFactory.decodeByteArray(data, 0, data.length, options);
     }
+
     /**
      * 根据scale生成一张图片
      *
@@ -96,5 +108,35 @@ public class BitmapByteDrawable {
             }
         }
         return null;
+    }
+
+    public static void saveImage(Context context, Bitmap bmp, String fileName) {
+        // 首先保存图片
+        File appDir = new File(Environment.getExternalStorageDirectory(), "PinYin/pic");
+        if (!appDir.exists()) {
+            appDir.mkdir();
+        }
+        fileName += ".png";
+        File file = new File(appDir, fileName);
+        try {
+            FileOutputStream fos = new FileOutputStream(file);
+            bmp.compress(Bitmap.CompressFormat.PNG, 80, fos);
+            fos.flush();
+            fos.close();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        // 其次把文件插入到系统图库
+        try {
+            MediaStore.Images.Media.insertImage(context.getContentResolver(),
+                    file.getAbsolutePath(), fileName, null);
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+        // 最后通知图库更新
+        context.sendBroadcast(new Intent(Intent.ACTION_MEDIA_SCANNER_SCAN_FILE, Uri.parse("file://" + Environment.getExternalStorageDirectory() + fileName + ".png")));
     }
 }
