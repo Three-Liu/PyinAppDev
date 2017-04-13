@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.pinyin.ui.layout.PinActivity">
+    <include android:id="@+id/mark"
+        layout="@layout/common_toolbar"/>
+    <android.support.v7.widget.CardView
+        android:id="@+id/detail"
+        android:layout_below="@id/mark"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        app:cardElevation="3dp"
+        app:cardCornerRadius="4dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:orientation="horizontal">
+            <!--1:3-->
+            <ImageView
+                android:id="@+id/item_icon"
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="15dp"
+                android:layout_weight="1"
+                android:background="@drawable/item_goods_shadow"
+                android:elevation="8dp"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/head" />
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="65dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="20dp"
+                android:layout_weight="3">
+
+                    <TextView
+                        android:id="@+id/pin_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:text="Kiss My Ass"
+                        android:textColor="@android:color/black"
+                        android:textSize="12sp" />
+
+
+
+                    <TextView
+                        android:id="@+id/pin_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                       android:text="$ 120.00"
+                        android:textSize="13sp"
+                        android:textColor="@color/colorPrimaryDark"/>
+
+
+                <RelativeLayout
+                    android:id="@+id/pin_status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginTop="20dp">
+
+                    <TextView
+                        android:id="@+id/share_type"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:text="剩余人数: "
+                        android:textSize="8sp" />
+
+                    <TextView
+                        android:id="@+id/share_type_num"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@id/share_type"
+                        android:text="2"
+                        android:textSize="8sp" />
+
+                    <TextView
+                        android:id="@+id/share_surplus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="60dp"
+                        android:layout_toRightOf="@id/share_type_num"
+                        android:text="人均: "
+                        android:textSize="8sp" />
+
+                    <!-- lack of money
+                         money per person-->
+
+                    <TextView
+                        android:id="@+id/share_surplus_num"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@id/share_surplus"
+                        android:text="2元"
+                        android:textSize="8sp" />
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+    <android.support.v7.widget.CardView
+        android:id="@+id/address"
+        android:layout_below="@id/detail"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_marginTop="10dp"
+        app:cardElevation="1dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:text="收货地址"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:id="@+id/arrow"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:src="@mipmap/arrow_right"
+                android:tint="@color/colorBackground" />
+
+            <RelativeLayout
+                android:layout_width="150dp"
+                android:layout_height="24dp"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@id/arrow">
+
+                <TextView
+                    android:id="@+id/buyer_info"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginBottom="0.5dp"
+                    android:text="王瑞之 +86 10086"
+                    android:textSize="11sp" />
+
+                <TextView
+                    android:id="@+id/buyer_dest"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:text="north of china tech university"
+                    android:textSize="11sp" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+    <android.support.v7.widget.CardView
+        android:layout_below="@id/address"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_marginTop="3dp"
+        app:cardElevation="1dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:text="运费"
+                android:textSize="14dp"
+                android:layout_marginLeft="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorPrimaryDark"
+                android:layout_centerVertical="true"/>
+                <TextView
+                    android:id="@+id/transform_fee"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="0.5dp"
+                    android:text="5$"
+                    android:textSize="13sp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="20dp"/>
+
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+    <RelativeLayout
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/colorAccent">
+        <TextView
+            android:id="@+id/total"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="实付款: "
+            android:textSize="12sp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"/>
+        <TextView
+            android:id="@+id/money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" 120元"
+            android:textSize="12sp"
+            android:textColor="@color/colorPrimaryDark"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/total"/>
+        <Button
+            android:id="@+id/buy"
+            android:layout_width="80dp"
+            android:layout_height="24dp"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:text="拼in"
+            android:textColor="@color/colorAccent"
+            android:background="@drawable/corner_button"
+            android:textSize="12sp"
+            android:layout_alignParentRight="true"/>
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,6 +1,7 @@
 package com.pinyin.ui.fragment;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
@@ -12,6 +13,7 @@ import android.widget.Toast;
 
 import com.pinyin.liusirui.pyinappdev.R;
 import com.pinyin.model.MainItem;
+import com.pinyin.ui.layout.MainDetailActivity;
 import com.pinyin.utils.MainAdapter;
 import com.yalantis.phoenix.PullToRefreshView;
 
@@ -62,7 +64,7 @@ public class HomeFragment extends Fragment implements MainAdapter.ItemClickCallb
 
     @Override
     public void onItemClick(int p) {
-        Toast.makeText(getActivity(),"item: "+p,Toast.LENGTH_SHORT).show();
+        startActivity(new Intent(getActivity(), MainDetailActivity.class));
     }
 
     @Override
@@ -77,9 +79,15 @@ public class HomeFragment extends Fragment implements MainAdapter.ItemClickCallb
 
     private void dataInital(){
         data = new ArrayList<>();
-        for(int i=0;i<10;i++){
+        for(int i=0;i<3;i++){
             data.add(new MainItem(R.mipmap.head,R.mipmap.head,R.mipmap.person_sex_male,"Apple","20min",
-                    "Apple Headquarter","I wonna quit!!!","剩余人数: ","3","人均: ","40$"));
+                    "Apple Headquarter","I wonna quit!!!",true,true,"3","40$"));
+            data.add(new MainItem(R.mipmap.head,R.mipmap.head,R.mipmap.person_sex_female,"Apple","20min",
+                    "Apple Headquarter","I wonna quit!!!",false,true,"5","14$"));
+            data.add(new MainItem(R.mipmap.head,R.mipmap.head,R.mipmap.person_sex_male,"Apple","20min",
+                    "Apple Headquarter","I wonna quit!!!",true,false,"250$",""));
+            data.add(new MainItem(R.mipmap.head,R.mipmap.head,R.mipmap.person_sex_female,"Apple","20min",
+                    "Apple Headquarter","I wonna quit!!!",false,false,"128$",""));
         }
     }
 }

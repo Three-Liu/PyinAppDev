@@ -46,6 +46,9 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.MainViewHolder
         holder.time.setText(item.getBroadcastTime());
         holder.position.setText(item.getBroadcastPostion());
         holder.content.setText(item.getBroadcastContent());
+        if(!item.isOnOff()){
+            holder.link.setVisibility(View.INVISIBLE);
+        }
         holder.typeNum.setText(item.getShareTypeNum());
         holder.type.setText(item.getShareType());
         holder.surplus.setText(item.getShareSurplus());

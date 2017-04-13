@@ -8,7 +8,7 @@
     tools:context="com.pinyin.ui.layout.MyPingActivity">
     <include
         android:id="@+id/toolbar_flag"
-        layout="@layout/commen_toolar"/>
+        layout="@layout/common_toolbar"/>
     <android.support.v7.widget.RecyclerView
         android:layout_below="@id/toolbar_flag"
         android:id="@+id/my_ping_recycler"

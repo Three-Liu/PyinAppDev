@@ -82,7 +82,7 @@
                     android:layout_width="15dp"
                     android:layout_height="15dp"
                     android:layout_centerVertical="true"
-                    android:scaleType="centerCrop"
+                    android:scaleType="fitCenter"
                     android:src="@mipmap/person_sex_male" />
 
                 <TextView
@@ -166,7 +166,7 @@
                 android:layout_alignParentRight="true"
                 android:layout_marginRight="10dp"
                 android:text="@string/good_link"
-                android:textColor="@color/colorFont"
+                android:textColor="@color/colorAccent"
                 android:textSize="8sp" />
         </RelativeLayout>
     </LinearLayout>

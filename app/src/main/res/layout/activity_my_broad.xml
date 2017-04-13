@@ -8,7 +8,7 @@
     tools:context="com.pinyin.ui.layout.MyPingActivity">
     <include
         android:id="@+id/toolbar_flag"
-        layout="@layout/commen_toolar"/>
+        layout="@layout/common_toolbar"/>
     <android.support.v7.widget.RecyclerView
         android:layout_below="@id/toolbar_flag"
         android:id="@+id/my_ping_recycler"
@@ -30,7 +30,7 @@
             android:text="发布宝贝"
             android:layout_marginTop="20dp"
             android:textSize="14sp"
-            android:textColor="@color/colorFont"
+            android:textColor="@color/colorAccent"
             android:background="@drawable/button_selector"
             android:layout_width="70dp"
             android:layout_gravity="center_horizontal"

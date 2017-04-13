@@ -9,7 +9,7 @@
 
     <include
         android:id="@+id/below_flag"
-        layout="@layout/commen_toolar" />
+        layout="@layout/common_toolbar" />
 
     <RelativeLayout
         android:id="@+id/main_container"
@@ -55,7 +55,7 @@
         android:layout_width="match_parent"
         android:textSize="14sp"
         android:layout_height="45dp"
-        android:background="@color/colorFont"
+        android:background="@color/colorAccent"
         style="@style/ButtonBorderless"/>
     <View
         android:layout_below="@id/deposit_money"
@@ -69,6 +69,6 @@
         android:layout_height="45dp"
         android:textSize="14sp"
         android:layout_below="@id/deposit_money"
-        android:background="@color/colorFont"
+        android:background="@color/colorAccent"
         style="@style/ButtonBorderless"/>
 </RelativeLayout>

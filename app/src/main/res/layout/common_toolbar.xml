@@ -10,12 +10,12 @@
         android:layout_height="wrap_content"
         android:background="@color/colorPrimaryDark"
         app:navigationIcon="@mipmap/arrow"
-        app:titleTextColor="@color/colorFont">
+        app:titleTextColor="@color/colorAccent">
         <TextView
             android:id="@+id/toolbar_title"
             android:layout_gravity="center"
             android:textSize="20sp"
-            android:textColor="@color/colorFont"
+            android:textColor="@color/colorAccent"
             android:layout_width="wrap_content"
             android:layout_height="match_parent" />
     </android.support.v7.widget.Toolbar>

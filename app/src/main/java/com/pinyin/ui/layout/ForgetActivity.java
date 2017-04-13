@@ -11,11 +11,11 @@ import android.widget.LinearLayout;
 
 import com.pinyin.liusirui.pyinappdev.R;
 
-public class ForgetActicity extends AppCompatActivity {
+public class ForgetActivity extends AppCompatActivity {
     private Toolbar toolbar;
     private Button fetch; //send verification code
     private Button confirm; //verify phone
-    private ForgetActicity.TimeCount timer;
+    private ForgetActivity.TimeCount timer;
     private LinearLayout first; //first container
     private LinearLayout second; //second container
 
@@ -31,7 +31,7 @@ public class ForgetActicity extends AppCompatActivity {
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(ForgetActicity.this, MainActivity.class));
+                startActivity(new Intent(ForgetActivity.this, MainActivity.class));
             }
         });
 

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--综合-->
+    <string-array name="mixsort">
+        <item>综合</item>
+        <item>价格</item>
+        <item>人数</item>
+    </string-array>
+    <!--按距离-->
+    <string-array name="distsort">
+        <item>小于100m</item>
+        <item>250m</item>
+        <item>大于500m</item>
+        <item>1000m</item>
+    </string-array>
+    <!--online offline-->
+    <string-array name="onsort">
+        <item>线上</item>
+        <item>线下</item>
+    </string-array>
+</resources>

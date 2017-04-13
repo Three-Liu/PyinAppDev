@@ -18,7 +18,7 @@
         android:layout_height="50dp"
         app:containerId="@id/main_container"
         app:navigateTabSelectedTextColor="@color/colorPrimaryDark"
-        app:navigateTabTextColor="@color/tab_text_normal"/>
+        app:navigateTabTextColor="@color/colorBlack"/>
     <at.markushi.ui.CircleButton
         android:layout_width="64dip"
         android:layout_height="64dip"

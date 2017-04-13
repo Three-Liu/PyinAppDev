@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:background="@color/colorBackground"
     tools:context="com.pinyin.ui.layout.LoginActivity">
-    <include layout="@layout/commen_toolar"/>
+    <include layout="@layout/common_toolbar"/>
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -44,7 +44,7 @@
                     android:id="@+id/login"
                     android:layout_gravity="center_horizontal"
                     android:text="@string/login"
-                    android:textColor="@color/colorFont"
+                    android:textColor="@color/colorAccent"
                     android:layout_marginTop="6dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"

@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.pinyin.ui.layout.MainDetailActivity"
+    android:background="@color/colorBackground">
+
+    <include layout="@layout/common_toolbar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0px"
+        android:layout_weight="10">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp">
+
+                <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/broader_head"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_centerVertical="true"
+                    android:src="@mipmap/head" />
+
+                <TextView
+                    android:id="@+id/broader_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@id/broader_head"
+                    android:text="王瑞之"
+                    android:textColor="@android:color/background_dark"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/broad_type"
+                    android:layout_width="24dp"
+                    android:layout_height="13dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@id/broader_name"
+                    android:background="@color/colorPrimaryDark"
+                    android:gravity="center"
+                    android:text="线上"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="10sp" />
+
+                <TextView
+                    android:id="@+id/top_condition"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center"
+                    android:text="90元/人"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="15sp" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.2dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/list_divider" />
+
+            <TextView
+                android:id="@+id/broad_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:lineSpacingMultiplier="1.7"
+                android:padding="15dp"
+                android:text="登录CS:GO账号成功后，请点击右上方“开始游戏”按钮。然后在新窗口中点击页面右侧的“前往完美世界”按钮。
+
+接下来，您会看到下图登录完美通行证页面。
+
+-如果您已经在官网激活或认证过，请直接使用当时激活或认证的完美通行证进行登录；
+
+-如果您没有完美通行证，请直接在此页面用手机号注册"
+                android:textColor="@android:color/background_dark"
+                android:textSize="14sp" />
+
+            <ListView
+                android:id="@+id/pic_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:divider="#00000000"
+                android:dividerHeight="0dip"
+                android:touchscreenBlocksFocus="true"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/broad_pos"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentLeft="true"
+                    android:text="Apple HQ"
+                    android:textSize="10sp"/>
+
+                <TextView
+                    android:id="@+id/bottom_condition"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:text="剩余人数: 3人"
+                    android:textSize="10sp" />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="15dp"
+                android:background="@drawable/list_divider"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:text="评论区"
+                android:layout_marginLeft="20dp"
+                android:gravity="center_vertical"
+                android:textColor="@android:color/background_dark"
+                android:textSize="12sp"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.2dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/list_divider" />
+
+            <ListView
+                android:id="@+id/comment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:divider="#00000000"
+                android:dividerHeight="0dip"
+                android:touchscreenBlocksFocus="true"
+                android:paddingBottom="10dp"/>
+        </LinearLayout>
+    </ScrollView>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0px"
+        android:layout_weight="1">
+        <ImageView
+            android:id="@+id/comment_img"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:scaleType="fitCenter"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="20dp"
+            android:src="@drawable/comment"
+            android:tint="@color/colorPrimaryDark"/>
+        <Button
+            android:id="@+id/buy"
+            android:layout_width="80dp"
+            android:layout_height="35dp"
+            android:layout_centerVertical="true"
+            android:text="拼in"
+            android:layout_alignParentRight="true"
+            android:textColor="@color/colorAccent"
+            android:background="@drawable/corner_button"
+            android:layout_marginRight="20dp"/>
+    </RelativeLayout>
+</LinearLayout>

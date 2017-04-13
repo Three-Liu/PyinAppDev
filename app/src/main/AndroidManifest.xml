@@ -3,9 +3,9 @@
     package="com.pinyin.liusirui.pyinappdev">
 
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
-    <!--<uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>-->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
+    <!-- <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/> -->
     <application
         android:name="com.pinyin.utils.MyApplication"
         android:allowBackup="true"
@@ -23,11 +23,17 @@
         <activity android:name="com.pinyin.ui.layout.LoginActivity" />
         <activity android:name="com.pinyin.ui.layout.PassResetActivity" />
         <activity android:name="com.pinyin.ui.layout.RegisterActivity" />
-        <activity android:name="com.pinyin.ui.layout.ForgetActicity" />
+        <activity android:name="com.pinyin.ui.layout.ForgetActivity" />
         <activity android:name="com.pinyin.ui.layout.PersonDetailActivity" />
         <activity android:name="com.pinyin.ui.layout.MyMoneyActivity" />
         <activity android:name="com.pinyin.ui.layout.MyPingActivity" />
-        <activity android:name="com.pinyin.ui.layout.MyBroadActivity"></activity>
+        <activity android:name="com.pinyin.ui.layout.MyBroadActivity" />
+        <activity android:name="com.pinyin.ui.layout.MainDetailActivity">
+
+        </activity>
+        <activity android:name="com.pinyin.ui.layout.PinActivity">
+
+        </activity>
     </application>
 
 </manifest>

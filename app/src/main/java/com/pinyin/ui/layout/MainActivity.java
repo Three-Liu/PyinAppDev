@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity{
         //对应xml中的containerId
         navigateTabBar.setFrameLayoutId(R.id.main_container);
         //对应xml中的navigateTabTextColor
-        navigateTabBar.setTabTextColor(getResources().getColor(R.color.tab_text_normal));
+        navigateTabBar.setTabTextColor(getResources().getColor(R.color.colorBlack));
         //对应xml中的navigateTabSelectedTextColor
         navigateTabBar.setSelectedTabTextColor(getResources().getColor(R.color.colorPrimaryDark));
 

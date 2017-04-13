@@ -18,7 +18,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="4dip"
-        android:textColor="@color/tab_text_normal"
+        android:textColor="@color/colorBlack"
         android:textSize="9.0sp"/>
 
 

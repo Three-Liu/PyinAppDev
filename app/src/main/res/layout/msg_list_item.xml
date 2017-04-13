@@ -37,7 +37,7 @@
         android:text="认证"
         android:gravity="center"
         android:textSize="9dp"
-        android:textColor="@color/colorFont"/>
+        android:textColor="@color/colorAccent"/>
     <!--@+id/msg_item_subtitle-->
     <TextView
         android:id="@+id/msg_item_subtitle"
@@ -58,7 +58,7 @@
         android:layout_width="20dp"
         android:layout_height="20dp"
         android:gravity="center"
-        android:textColor="@color/colorFont"
+        android:textColor="@color/colorAccent"
         android:text="5"
         android:background="@drawable/massage_notice"/>
     <TextView

@@ -18,7 +18,9 @@ public class MainItem {
     private String broadcastTime; // a percise time , after subract current time
     private String broadcastPostion;
     private String broadcastContent;
+    private boolean type; //person true,money false
 
+    private boolean onOff; //online true, offline false;
     private String shareType;//according to pin type
     private String shareTypeNum;//the rest of person / the lack of money
     private String shareSurplus;
@@ -33,7 +35,8 @@ public class MainItem {
     // fake constructor
 
 
-    public MainItem(int itemIcon, int broadcasterHead, int broadcasterGender, String broadcastName, String broadcastTime, String broadcastPostion, String broadcastContent, String shareType, String shareTypeNum, String shareSurplus, String shareSurplusNum) {
+    public MainItem(int itemIcon, int broadcasterHead, int broadcasterGender, String broadcastName, String broadcastTime,
+                    String broadcastPostion, String broadcastContent, boolean onOff, boolean type,String shareTypeNum, String shareSurplusNum) {
         this.itemIcon = itemIcon;
         this.broadcasterHead = broadcasterHead;
         this.broadcasterGender = broadcasterGender;
@@ -41,10 +44,19 @@ public class MainItem {
         this.broadcastTime = broadcastTime;
         this.broadcastPostion = broadcastPostion;
         this.broadcastContent = broadcastContent;
-        this.shareType = shareType;
-        this.shareTypeNum = shareTypeNum;
-        this.shareSurplus = shareSurplus;
-        this.shareSurplusNum = shareSurplusNum;
+        this.onOff = onOff;
+        this.type = type;
+        if(type) {
+            this.shareType = "剩余人数： ";
+            this.shareTypeNum = shareTypeNum;
+            this.shareSurplus = "人均： ";
+            this.shareSurplusNum = shareSurplusNum;
+        }else{
+            this.shareType = "剩余价格： ";
+            this.shareTypeNum = shareTypeNum;
+            this.shareSurplus = "";
+            this.shareSurplusNum = "";
+        }
     }
 
     public int getItemIcon() {
@@ -90,4 +102,9 @@ public class MainItem {
     public String getShareSurplusNum() {
         return shareSurplusNum;
     }
+
+    public boolean isOnOff() {
+        return onOff;
+    }
 }
+

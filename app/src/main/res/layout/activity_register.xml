@@ -8,7 +8,7 @@
     android:orientation="vertical"
     tools:context="com.pinyin.ui.layout.RegisterActivity">
 
-    <include layout="@layout/commen_toolar" />
+    <include layout="@layout/common_toolbar" />
 
     <RelativeLayout
         android:layout_width="match_parent"
