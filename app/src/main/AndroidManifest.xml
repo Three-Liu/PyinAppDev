@@ -28,12 +28,10 @@
         <activity android:name="com.pinyin.ui.layout.MyMoneyActivity" />
         <activity android:name="com.pinyin.ui.layout.MyPingActivity" />
         <activity android:name="com.pinyin.ui.layout.MyBroadActivity" />
-        <activity android:name="com.pinyin.ui.layout.MainDetailActivity">
+        <activity android:name="com.pinyin.ui.layout.MainDetailActivity" />
+        <activity android:name="com.pinyin.ui.layout.PinActivity" />
+        <activity android:name="com.pinyin.ui.layout.BroadDetailActivity" />
 
-        </activity>
-        <activity android:name="com.pinyin.ui.layout.PinActivity">
-
-        </activity>
     </application>
 
 </manifest>

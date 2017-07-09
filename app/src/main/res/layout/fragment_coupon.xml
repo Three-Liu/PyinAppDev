@@ -1,17 +1,26 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
+    android:background="@color/colorAccent"
     tools:context="com.pinyin.ui.fragment.CouponFragment">
 
     <!-- TODO: Update blank fragment layout -->
     <include
         android:id="@+id/flag"
         layout="@layout/fragment_toolar"/>
-    <!--<WebView-->
-        <!--android:id="@+id/web_page"-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"/>-->
 
-</LinearLayout>
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/coupon_list"
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/flag">
+
+    </android.support.v7.widget.RecyclerView>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_below="@id/coupon_list" />
+</RelativeLayout>

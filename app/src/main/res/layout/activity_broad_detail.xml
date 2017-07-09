@@ -1,0 +1,441 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/order_status"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:background="@color/colorBackground"
+    tools:context="com.pinyin.ui.layout.BroadDetailActivity">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cardView6"
+        android:layout_width="0dp"
+        android:layout_height="118dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:cardCornerRadius="5dp"
+        app:cardElevation="1dp"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/img_item"
+                    android:layout_width="72dp"
+                    android:layout_height="72dp"
+                    android:background="@drawable/item_goods_shadow"
+                    android:elevation="12dp"
+                    android:scaleType="centerCrop"
+                    android:src="@mipmap/head" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginRight="14dp"
+                android:layout_marginTop="10dp"
+                android:layout_weight="3">
+
+                <TextView
+                    android:id="@+id/tx_order_content"
+                    android:layout_width="172dp"
+                    android:layout_height="wrap_content"
+                    android:text="iPhone7 32g 移动联通双网带电话卡"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="12sp" />
+
+
+                <TextView
+                    android:id="@+id/tx_order_number_mark"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@id/tx_order_number_mark"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="21dp"
+                    android:text="总人数:"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="8sp" />
+
+                <TextView
+                    android:id="@+id/tx_order_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@id/tx_order_number_mark"
+                    android:layout_marginLeft="2dp"
+                    android:layout_toRightOf="@id/tx_order_number_mark"
+                    android:text="2"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="8sp" />
+
+                <TextView
+                    android:id="@+id/tx_order_avg_mark"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@id/tx_order_number_mark"
+                    android:layout_marginLeft="18dp"
+                    android:layout_toRightOf="@id/tx_order_number_mark"
+                    android:text="人均:"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="8sp" />
+
+                <TextView
+                    android:id="@+id/tx_order_avg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@id/tx_order_number_mark"
+                    android:layout_marginLeft="2dp"
+                    android:layout_toRightOf="@id/tx_order_avg_mark"
+                    android:text="60"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="8sp" />
+
+                <TextView
+                    android:id="@+id/tx_order_price_mark"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@id/tx_order_number_mark"
+                    android:layout_alignLeft="@id/tx_order_content"
+                    android:layout_marginBottom="6dp"
+                    android:text="￥ "
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/tx_order_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@id/tx_order_price_mark"
+                    android:layout_toRightOf="@id/tx_order_price_mark"
+                    android:text="120"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="12sp" />
+
+                <Button
+                    android:id="@+id/btn_exchange"
+                    android:layout_width="32dp"
+                    android:layout_height="18dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_margin="8dp"
+                    android:background="@drawable/button_selector"
+                    android:text="退款"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="8sp" />
+            </RelativeLayout>
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+    <include
+        android:id="@+id/include"
+        layout="@layout/common_toolbar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="7dp"
+        android:background="@color/colorAccent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/include">
+
+        <TextView
+            android:id="@+id/tx_express_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="24dp"
+            android:text="卖家已发货" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_alignParentStart="true"
+            android:layout_centerHorizontal="false"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="20dp"
+            android:layout_marginStart="20dp"
+            android:adjustViewBounds="false"
+            app:srcCompat="@mipmap/layout_logo"
+            tools:layout_editor_absoluteX="-262dp"
+            tools:layout_editor_absoluteY="194dp" />
+
+    </RelativeLayout>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="0dp"
+        android:layout_height="136dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:padding="5dp"
+        app:cardCornerRadius="5dp"
+        app:cardElevation="1dp"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginBottom="6dp"
+                android:layout_marginLeft="14dp"
+                android:layout_marginTop="12dp"
+                android:layout_weight="4">
+
+                <TextView
+                    android:id="@+id/tx_express_company"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="3dp"
+                    android:text="[顺丰快递]"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/tx_express_detail"
+                    android:layout_width="224dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="3dp"
+                    android:layout_toRightOf="@id/tx_express_company"
+                    android:text="北京石景山区派件员: 近邻宝279762531正在为您派件"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="12sp" />
+
+                <Button
+                    android:id="@+id/btn_more"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="14dp"
+                    android:background="@mipmap/arrow_right"
+                    android:backgroundTint="@android:color/darker_gray" />
+
+                <TextView
+                    android:id="@+id/tx_express_status_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@id/tx_express_company"
+                    android:layout_alignParentBottom="true"
+                    android:text="2017-04-17 13:41:13"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="12sp" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/colorBlack" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginBottom="6dp"
+                android:layout_marginLeft="14dp"
+                android:layout_marginTop="6dp"
+                android:layout_weight="3">
+
+                <TextView
+                    android:id="@+id/tx_express_receiver_mark"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="3dp"
+                    android:text="收货人: "
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/tx_express_receiver"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@id/tx_express_receiver_mark"
+                    android:layout_margin="2dp"
+                    android:layout_toRightOf="@id/tx_express_receiver_mark"
+                    android:text="王瑞之 "
+                    android:textColor="@color/colorBlack"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/tx_receiver_tel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@id/tx_express_receiver_mark"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="10dp"
+                    android:text="15011058308 "
+                    android:textColor="@color/colorBlack"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/tx_express_address_mark"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_margin="3dp"
+                    android:text="收货地址: "
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/tx_express_address"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@id/tx_express_address_mark"
+                    android:layout_margin="2dp"
+                    android:layout_toRightOf="@id/tx_express_address_mark"
+                    android:text="北京市晋元庄路5号北方工业大学 "
+                    android:textColor="@color/colorBlack"
+                    android:textSize="12sp" />
+            </RelativeLayout>
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="72dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/colorAccent"
+        android:paddingLeft="24dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView6"
+        android:id="@+id/relativeLayout2">
+
+        <TextView
+            android:id="@+id/tx_express_number_mark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:text="订单编号: "
+            android:textColor="@android:color/darker_gray"
+            android:textSize="8sp" />
+
+        <TextView
+            android:id="@+id/tx_express_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:text="1234561351651313515 "
+            android:textColor="@android:color/darker_gray"
+            android:textSize="8sp"
+            android:layout_toRightOf="@id/tx_express_number_mark"
+            android:layout_alignBaseline="@id/tx_express_number_mark" />
+
+        <TextView
+            android:id="@+id/tx_order_create_mark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tx_express_number_mark"
+            android:layout_margin="4dp"
+            android:text="创建时间: "
+            android:textColor="@android:color/darker_gray"
+            android:textSize="8sp" />
+
+        <TextView
+            android:id="@+id/tx_order_create"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:text="2017-04-15 14:08:57 "
+            android:textColor="@android:color/darker_gray"
+            android:textSize="8sp"
+            android:layout_toRightOf="@id/tx_order_create_mark"
+            android:layout_alignBaseline="@id/tx_order_create_mark" />
+
+        <TextView
+            android:id="@+id/tx_pay_time_mark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tx_order_create_mark"
+            android:layout_margin="4dp"
+            android:text="付款时间: "
+            android:textColor="@android:color/darker_gray"
+            android:textSize="8sp" />
+
+        <TextView
+            android:id="@+id/tx_pay_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:text="1234561351651313515 "
+            android:textColor="@android:color/darker_gray"
+            android:textSize="8sp"
+            android:layout_toRightOf="@id/tx_pay_time_mark"
+            android:layout_alignBaseline="@id/tx_pay_time_mark" />
+
+        <TextView
+            android:id="@+id/tx_express_time_mark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tx_pay_time_mark"
+            android:layout_margin="3dp"
+            android:text="发货时间: "
+            android:textColor="@android:color/darker_gray"
+            android:textSize="8sp" />
+
+        <TextView
+            android:id="@+id/tx_express_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:text="1234561351651313515 "
+            android:textColor="@android:color/darker_gray"
+            android:textSize="8sp"
+            android:layout_toRightOf="@id/tx_express_time_mark"
+            android:layout_alignBaseline="@id/tx_express_time_mark" />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btn_confirm"
+        android:layout_width="88dp"
+        android:layout_height="48dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="65dp"
+        android:background="@drawable/button_selector"
+        android:text="确认收货"
+        android:textColor="@color/colorAccent"
+        android:textSize="11sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout2"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp" />
+</android.support.constraint.ConstraintLayout>

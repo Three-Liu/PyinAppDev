@@ -28,9 +28,9 @@ public class MainItem {
 
 // accomplish next time
 
-//    public MainItem(Pin p) {
-//
-//    }
+    public MainItem() {
+
+    }
 
     // fake constructor
 

@@ -37,6 +37,5 @@ dependencies {
     compile 'com.yalantis:phoenix:1.2.3'
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
     compile 'com.alibaba:fastjson:1.2.33'
-    compile 'com.alibaba:fastjson:1.1.58.android'
     testCompile 'junit:junit:4.12'
 }

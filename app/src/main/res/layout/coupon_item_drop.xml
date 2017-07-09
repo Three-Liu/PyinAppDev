@@ -10,27 +10,27 @@
         android:layout_margin="4dp"
         android:layout_gravity="center_horizontal">
         <de.hdodenhof.circleimageview.CircleImageView
-            android:id="@+id/shop_head"
+            android:id="@+id/coupon_shop_head"
             android:layout_width="36dp"
             android:layout_height="36dp"
             android:src="@mipmap/head"/>
         <TextView
-            android:id="@+id/shop_name"
+            android:id="@+id/coupon_shop_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="麦当劳"
-            android:layout_toRightOf="@id/shop_head"
-            android:layout_alignTop="@id/shop_head"
+            android:layout_toRightOf="@id/coupon_shop_head"
+            android:layout_alignTop="@id/coupon_shop_head"
             android:layout_marginLeft="8dp"
             android:textSize="12sp"
             android:textColor="@android:color/background_dark"/>
         <TextView
-            android:id="@+id/shop_address"
+            android:id="@+id/coupon_shop_address"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="北京市石景山区晋元庄路5号"
-            android:layout_toRightOf="@id/shop_head"
-            android:layout_alignBottom="@id/shop_head"
+            android:layout_toRightOf="@id/coupon_shop_head"
+            android:layout_alignBottom="@id/coupon_shop_head"
             android:layout_marginLeft="8dp"
             android:textSize="10sp"
             android:textColor="@android:color/darker_gray"/>
@@ -63,15 +63,16 @@
             android:textSize="10sp" />
 
         <TextView
-            android:id="@+id/coupon_usage"
+            android:id="@+id/coupon_requirement"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="1dp"
             android:text="满188元减20元"
             android:textColor="@android:color/darker_gray"
             android:textSize="10sp"
-            android:layout_toRightOf="@id/title_usage"
-            android:layout_marginLeft="4dp"/>
+            android:layout_marginLeft="1dp"
+            android:layout_marginRight="1dp"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@+id/title_usage" />
 
         <TextView
             android:id="@+id/title_date"
@@ -86,7 +87,7 @@
             android:layout_alignLeft="@id/title_usage"/>
 
         <TextView
-            android:id="@+id/coupon_date"
+            android:id="@+id/coupon_time"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="1dp"
@@ -112,7 +113,7 @@
         android:layout_margin="6dp"
         android:layout_gravity="center_horizontal">
         <TextView
-            android:id="@+id/coupon_rest_label"
+            android:id="@+id/coupon_rest_mark"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="剩余数量: "
@@ -120,16 +121,16 @@
             android:textColor="@android:color/darker_gray"
             android:layout_centerVertical="true"/>
         <TextView
-            android:id="@+id/coupon_rest"
+            android:id="@+id/coupon_num"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="24"
             android:textSize="10sp"
             android:textColor="@color/colorPrimaryDark"
-            android:layout_toRightOf="@id/coupon_rest_label"
+            android:layout_toRightOf="@id/coupon_rest_mark"
             android:layout_centerVertical="true"/>
         <Button
-            android:id="@+id/get"
+            android:id="@+id/get_btn"
             android:layout_width="48dp"
             android:layout_height="14dp"
             android:text="获取"

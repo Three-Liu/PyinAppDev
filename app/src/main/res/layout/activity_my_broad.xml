@@ -11,14 +11,14 @@
         layout="@layout/common_toolbar"/>
     <android.support.v7.widget.RecyclerView
         android:layout_below="@id/toolbar_flag"
-        android:id="@+id/my_ping_recycler"
+        android:id="@+id/my_broad_recycler"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
     </android.support.v7.widget.RecyclerView>
 
     <LinearLayout
-        android:id="@android:id/empty"
+        android:id="@+id/empty"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
